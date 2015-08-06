@@ -32,18 +32,18 @@ class MyScene(scene.Scene):
     def draw(self):
         scene.background(0, 0.5, 1.0)
         scene.fill(1, 1, 1)
-        scene.rect(self.x,self.y,32,32)  # player
-        scene.fill(0,0,0)
-        scene.rect(self.x-70,self.y+75,700,32)  # roof
-        self.floor = scene.rect(self.x-70,self.y-75,700,32)  # floor
+        scene.rect(self.x,self.y, 32, 32)  # player
+        scene.fill(0, 0, 0)
+        scene.rect(self.x - 70, self.y + 75, 700, 32)  # roof
+        self.floor = scene.rect(self.x - 70, self.y - 75, 700, 32)  # floor
         print('self.floor is always None:', self.floor)
         if not self.grav:
             self.acel += 1
 
   #text
-        scene.tint(0,0,0,1)
+        scene.tint(0, 0, 0, 1)
         if self.dead:
-            scene.text('You are DEAD', 'Arial', 12, 48, self.y+ 16)
+            scene.text('You are DEAD', 'Arial', 12, 48, self.y + 16)
         else:
             self.pts += 1
         scene.text('Points: %i' % self.pts, 'Arial', 12, self.x-48, self.y + 32)
@@ -67,11 +67,11 @@ class MyScene(scene.Scene):
     def touch_began(self, touch):
         self.grav = not self.grav
 
-    def touch_moved(self, touch):
-        pass
+    #def touch_moved(self, touch):
+    #    pass
 
-    def touch_ended(self, touch):
-        pass
+    #def touch_ended(self, touch):
+    #    pass
 
 print('=' * 36)
 MyScene()
