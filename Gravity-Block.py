@@ -1,15 +1,15 @@
-'''
-    The problem is that self.floor is None and in Python ALL numbers
-    (even negative numbers!) are greater than None.
-
-    >>> -200 > None
-    True
-    >>> 200 > None
-    True
-    
-    Also you should use scene.Scene.bounds to know the screen size
-    of the devices so that your games look great on all devices.
-'''
+#'''
+#    The problem is that self.floor is None and in Python ALL numbers
+#    (even negative numbers!) are greater than None.
+#
+#    >>> -200 > None
+#    True
+#    >>> 200 > None
+#    True
+#    
+#    Also you should use scene.Scene.bounds to know the screen size
+#    of the devices so that your games look great on all devices.
+#'''
 
 import scene
 
